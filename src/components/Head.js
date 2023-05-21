@@ -52,7 +52,7 @@ const Head = () => {
         <img
           alt="ham"
           src={Ham}
-          className='h-8 w-8 cursor-pointer hover:bg-gray-200 hover:p-1 rounded-full'
+          className='h-8 w-8 cursor-pointer hover:bg-gray-200 rounded-full'
           onClick={() => toggleMenuHandler()}
         />
         <img alt="logo" src={YoutubeLogo} className='h-8 mx-2' />
