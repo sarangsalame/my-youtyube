@@ -4,7 +4,7 @@ import YoutubeLogo from "../assets/youtube-logo.png"
 import UserIcon from '../assets/user-icon.png'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleMenu } from '../utils/appSlice'
-import { YOUTUBE_SUGESSION_API } from '../utils/constants'
+
 import { cacheResults } from '../utils/searchSlice'
 
 const Head = () => {
@@ -31,7 +31,7 @@ const Head = () => {
 
 
   const getSugessionData = async () => {
-    let data = await fetch(YOUTUBE_SUGESSION_API + searchQuery)
+    let data = await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=" + searchQuery)
     let json = await data.json()
     setSugession(json[1])
 
