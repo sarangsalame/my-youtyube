@@ -8,7 +8,7 @@ const appSlice = createSlice({
   reducers: {
     toggleMenu: (state) => {
       state.isMenuOpen = !state.isMenuOpen
-      console.log(state.isMenuOpen)
+      
     },
     closeMenu: (state) => {
       state.isMenuOpen = false
