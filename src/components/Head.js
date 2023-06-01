@@ -32,6 +32,7 @@ const Head = () => {
 
   const getSugessionData = async () => {
     let data = await fetch("http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=" + searchQuery)
+    
     let json = await data.json()
     setSugession(json[1])
 
